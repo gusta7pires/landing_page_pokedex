@@ -24,7 +24,7 @@ body {
     font-family: sans-serif;
 }
 
-/* HEADER ZONE */
+/* HEADER */
 
 header {
     background-color: var(--dark-green-color);
@@ -40,6 +40,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 #logo_img {
@@ -63,4 +64,21 @@ a:hover {
     color: var(--brown-color);
 }
 
-/* END HEADER ZONE */
+/* END HEADER */
+
+/* MAIN */
+
+.main {
+    margin: 5rem auto;
+    max-width: 1080px;
+}
+
+/* SECTION 1 ZONE */
+
+.presentation {
+    display: flex;
+    align-items:end;
+    
+}
+
+/* END MAIN */
