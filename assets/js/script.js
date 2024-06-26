@@ -1,3 +1,18 @@
+/* Responsive */
+
+const head = document.querySelector('.navigator')
+const menu = document.querySelector('.menu')
+const navMenu = document.querySelector('.nav-menu')
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('active')
+    navMenu.classList.toggle('active')
+    head.classList.toggle('active')
+
+})
+
+
+/* Carousel */
 const controls = document.querySelectorAll('.control')
 
 let currentCard = 0

@@ -25,14 +25,14 @@ body {
     margin: 0 auto;
     background-image: url(../images/fundo-site.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-attachment: fixed;
 }
 
 
 
 /* HEADER */
 
-header {
+.navigator{
     background-color: var(--dark-green-color);
     color: var(--sand-color);
     display: flex;
@@ -69,6 +69,21 @@ a:hover {
     color: var(--brown-color);
 }
 
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--sand-color);
+    margin: 5px auto;
+    transition: all 0.3s
+}
+
 /* END HEADER */
 
 
@@ -81,17 +96,23 @@ a:hover {
 .section1{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     margin: 2rem auto 2rem;
     max-width: 900px;
     height: 380px;
+    border-radius: 2rem;
+    background-image: url(../images/safari.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .intro-text{
     padding: 0 3rem 0 1rem;
     text-align: right;
     min-width: 15rem;
+    max-width: 20rem;
     padding: 2rem;
     background-color: var(--gray-color);
     border-radius: 2rem;
@@ -107,10 +128,7 @@ a:hover {
     margin-top: 1rem;
 }
 
-.img-safari{
-    width: 600px;
-    border-radius: 2rem;
-}
+
 
 /* END SECTION 1*/
 
@@ -118,19 +136,21 @@ a:hover {
 
 /* Section 2 */
 
-.section{
+.section2,
+.section3{
     max-width: 900px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     background-color: var(--gray-color);
     border-radius: 2rem;
+    padding: 2rem;
+    z-index: 0;
 }
 
 .sec2-title{
     color: var(--green-color);
-    padding: 1.5rem 0 0;
     text-align: center;
     border-bottom: 2px solid var(--dark-green-color);
-    margin: 1rem auto;
+    margin: 0 auto 2rem;
     max-width: 23rem;
 }
 
@@ -139,7 +159,6 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin: 0 10rem;
     padding-bottom: 2rem;
 }
 
@@ -163,11 +182,15 @@ a:hover {
 .arrow-left,
 .arrow-right{
     cursor: pointer;
-    border: none;
+    height: 50px;
+    width: 50px;
+    border: 0;
     border-radius: 50%;
     padding: auto;
-    opacity: 0.5;
     transition: all 600ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow-left{
@@ -176,7 +199,7 @@ a:hover {
 
 .arrow-left:hover,
 .arrow-right:hover{
-    opacity: 1;
+    background-color: var(--brown-color);
 }
 
 .card{
@@ -217,6 +240,8 @@ a:hover {
     padding: 1rem;
     border-radius: 0px 0px 10px 10px;
     text-align: justify;
+    display: flex;
+    align-items: center;
 }
 
 .current-card{
@@ -239,12 +264,15 @@ a:hover {
     background-color: var(--gray-color);
     color: var(--green-color);
     padding: 0 0 1.5rem;
-    margin: 2rem;
     border-radius: 2rem;
 }
 
 .sec3-title h2{
     border-bottom: 2px solid var(--dark-green-color);
+}
+
+.img-container{
+    text-align: center;
 }
 
 .map-img{
@@ -263,6 +291,7 @@ a:hover {
     background-color: var(--dark-green-color);
     border-top: 2px solid var(--gray-color);
     color: var(--white-color);
+    position: fixed;
     bottom: 0;
     width: 100%;
     font-weight: 300;
@@ -280,16 +309,16 @@ a:hover {
     margin-bottom: 30px;
     background-color: var(--gray-color);
     border-radius: 2rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
-.about .section h2 {
+.section h2 {
     color: var(--green-color);
     border-bottom: 2px solid var(--green-color);
     padding-bottom: 5px;
 }
 
-.about .section p {
+.section p {
     color: var(--white-color);
     line-height: 1.6;
     text-align: justify;

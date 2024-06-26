@@ -1,0 +1,53 @@
+:root {
+    --green-color: #9ABF88;
+    --dark-green-color: #68886A;
+    --brown-color: #CC823F;
+    --sand-color: #E0C388;
+    --gray-color: #333333;
+    --white-color: #EAE8E8
+}
+
+@media (max-width:785px) {
+    .navigator.active {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 102px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--dark-green-color);
+        gap: -10px;
+        transition: 0.3s;
+        transform: translateZ(0);
+        z-index: 10;
+    }
+
+    .nav-menu.active{
+        right: 0;
+    }
+
+    .nav-item{
+        margin: 16px auto;
+    }
+
+}
