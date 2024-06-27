@@ -38,7 +38,7 @@
         background: var(--dark-green-color);
         gap: -10px;
         transition: 0.3s;
-        transform: translateZ(0);
+        
         z-index: 10;
     }
 
